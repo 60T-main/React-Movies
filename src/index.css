@@ -57,25 +57,26 @@
     @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
   }
 
-  .trending {
-    @apply mt-20;
+.trending {
+  @apply mt-20;
 
-    & ul {
-      @apply flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
-    }
-
-    & ul li {
-      @apply min-w-[230px] flex flex-row items-center;
-    }
-
-    & ul li p {
-      @apply fancy-text mt-[22px] text-nowrap;
-    }
-
-    & ul li img {
-      @apply w-[127px] h-[163px] rounded-lg object-cover -ml-3.5;
-    }
+  & ul {
+      @apply grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4;
   }
+
+  & ul li {
+    @apply min-w-[230px] flex flex-row items-center justify-center mr-15;
+  }
+
+  & ul li p {
+    @apply fancy-text mt-[22px] text-nowrap;
+  }
+
+& ul li img {
+  @apply w-[calc(127px*1.5)] h-[calc(163px*1.5)] rounded-lg object-cover -ml-3.5 lg:w-[calc(127px)] lg:h-[calc(163px)];
+}
+}
+
 
   .search {
     @apply w-full bg-light-100/5 px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
